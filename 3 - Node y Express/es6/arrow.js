@@ -1,20 +1,20 @@
 // Las funciones de flecha nos permiten definir funciones de una manera más limpia y clara. 
 // Fué tomado de Coffescript, un metalenguaje de Javascript compilado
 
-let nombre = "Juan";
 getNombre = () => {
-    return "Juan"
+    console.log("Juan")
 }
 
-// No conservan el contexto
+// No conservan el contexto (ELEMENTO PRINCIPAL)
 let flecha = () => {
-    console.log(this.getNombre())
+    this.getNombre()
 }
 
 let saludo = function() {
-    console.log(this.getNombre())
-}
-flecha()
+  this.getNombre()
+};
+
+//flecha() 
 saludo()
 
 
