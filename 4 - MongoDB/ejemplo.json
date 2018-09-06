@@ -1,0 +1,10 @@
+{
+    "nombre":"Juan Pablo Paillet",
+    "edad": 26,
+    "intereses": ["Interes 1", "Interes 2"],
+    "temasDictados":{
+        "primera":["HTML","Css","Javascript"],
+        "segunda":["Node","Express"]
+    }
+}
+

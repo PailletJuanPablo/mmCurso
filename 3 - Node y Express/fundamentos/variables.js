@@ -27,8 +27,13 @@ var array2 = ["Elem 1", true, 13];
 var color = new Object({
     nombre: "Rojo",
     nroHexa: "ff0000",
-    cssHandler: "red"
+    cssHandler: "red",
+    imprimirHexa: function(){
+        console.log( this.nroHexa)
+    }
 });
+
+color.imprimirHexa()
 
 var objeto2 = {
     propiedad1: "Rojo",
