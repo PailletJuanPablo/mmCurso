@@ -7,10 +7,9 @@ var bodyParser = require('body-parser');
 
 // Creamos una var para inicializar express, como así también un constructor para recibir peticiones body
 var app = express();
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(bodyParser.urlencoded());
 
 //Cargamos las rutas
-
 var rutasUsuario = require('./rutas/usuarios');
 
 // Configuramos bodyparser

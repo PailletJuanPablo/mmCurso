@@ -1,4 +1,5 @@
 'use strict'
+//Los modelos nos permiten definir la estructura que tendrán los diferentes documentos en nuestra base
 
 // Importamos mongoose para utilizarlo
 var mongoose = require('mongoose');
