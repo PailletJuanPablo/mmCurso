@@ -9,10 +9,10 @@ let app = require('./config');
 let port = 1234;
 
 // Especificamos la base hacia donde nos conectaremos
-let baseDatos = "cine"
+let baseDatos = "curso_mm";
 
 // Ejecutamos el método connect de la variable que contiene a Mongoose
-mongoose.connect('mongodb://localhost:27017/'+baseDatos,  { useNewUrlParser: true },
+mongoose.connect('mongodb://curso:curso1234@ds149672.mlab.com:49672/'+baseDatos,  { useNewUrlParser: true },
 (err,res)=>{
     if (err) {
         throw err;

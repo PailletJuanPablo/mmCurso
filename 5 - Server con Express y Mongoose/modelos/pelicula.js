@@ -6,7 +6,10 @@ let Schema = mongoose.Schema;
 
 //Creamos el modelo de Película
 let ModeloPelicula = Schema({
-    titulo: String,
+    titulo: {
+        type: String,
+        required: true
+      },
     descripcion: String,
     categoria: String,
     //Establecemos que una película podrá tener muchas fechas

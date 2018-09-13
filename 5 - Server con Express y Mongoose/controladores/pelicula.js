@@ -16,9 +16,9 @@ let obtenerPeliculas = (req, res) => {
     .exec((err, peliculas) => {
       if (err) {
         //Si hay un error, enviamos la respuesta aclarándolo
-        res.status(404).send("Hubo un error obteniendo peliculas");
+       return res.status(404).send("Hubo un error obteniendo peliculas");
       } else {
-       res.status(200).send(peliculas)
+       return res.status(200).send(peliculas)
        }
     });
 };
@@ -29,9 +29,9 @@ let crearPelicula = (req, res) => {
   nuevaPelicula.save((err, pelicula) => {
     if (err) {
       //Si hay un error, enviamos la respuesta aclarándolo
-      res.status(404).send("Hubo un error creando la pelicula");
+      return res.status(404).send("Hubo un error creando la pelicula");
     } else {
-     res.status(200).send(pelicula)
+      return res.status(200).send(pelicula)
      }
   });
 };
