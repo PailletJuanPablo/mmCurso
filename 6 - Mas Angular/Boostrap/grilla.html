@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grilla</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"><!-- Custom styles for this template -->
+
+    <style>
+        .row div {
+            padding: 10px;
+        }
+
+        .azul {
+            background: blue;
+        }
+
+        .rojo {
+            background: red;
+        }
+
+        .verde {
+            background: green
+        }
+
+        /* A través de las media queries podemos especificar reglas específicas en Css */
+        @media all and (max-width: 800px) {
+            /* En este caso, si el dispositivo tiene (como máximo) 800 px de ancho, 
+            los elementos h1 tendrá un tamaño de fuente de 10px */
+            h1 {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="text-align: center">
+        <h1> Grilla </h1>
+        <p> Los elementos se organizan en filas, que tienen 12 columnas. El contenido se inserta dentro de cada columna</p>
+    </div>
+
+    <br>
+    <br>
+    <!-- Para conseguir que sean responsives, los elementos se encasillan dentro de Rows, que se dividen en columnas  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 azul">
+                <!-- Aquí insertamos el contenido correspondiente a la primer columna-->
+                <h1> Bienvenido !</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et culpa voluptas laboriosam quasi exercitationem
+                    doloribus nostrum tenetur velit a, natus itaque adipisci beatae suscipit voluptates, nulla similique
+                    possimus facilis.</p>
+            </div>
+            <div class=" col-md-4 ">
+                <!-- Aquí insertamos el contenido correspondiente a la segunda columna-->
+                <img src="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png" class="img-fluid">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6 col-md-8 azul">Columna con ancho variable</div>
+            <div class=" col-md-4 verde">4 columnas</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 rojo">4 columnas </div>
+            <div class="col-md-4 verde">4 columnas </div>
+            <div class="col-md-4 azul">4 columnas </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 rojo">6 columnas </div>
+            <div class="col-md-6 verde">6 columnas </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</html>
