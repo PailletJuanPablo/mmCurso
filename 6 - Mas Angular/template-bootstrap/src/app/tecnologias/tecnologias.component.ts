@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tecnologias',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TecnologiasComponent implements OnInit {
 
-  constructor() { }
+  constructor(public activatedRoute: ActivatedRoute) { }
 
+  nombre: string;
   ngOnInit() {
+    this.nombre = this.activatedRoute.snapshot.params["nombre"];
   }
 
 }

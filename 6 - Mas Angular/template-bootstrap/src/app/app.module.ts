@@ -14,7 +14,9 @@ const appRoutes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'tecnologias', component: TecnologiasComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: '', component: InicioComponent }
+  { path: '', component: InicioComponent },
+  { path: 'saludar/:nombre', component: TecnologiasComponent },
+
 ];
 
 @NgModule({
