@@ -42,7 +42,7 @@ mongoose.connect(
         "Se realizó la correción a la base de datos" + direccionBaseDatos
       );
       //Empezamos a escuchar el puerto
-      app.listen(puerto, () => {
+      app.listen(process.env.PORT || puerto, () => {
         console.log("Servidor corriendo en puerto: " + puerto);
       });
     }
