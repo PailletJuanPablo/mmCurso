@@ -15,10 +15,10 @@ app.listen(puerto, (conexion)=>{
 // Definimos una ruta para manejar las peticiones GET
 app.get('/hola', (req, res)=>{
     return res.send("Holaa");
-})
+});
 // Definimos una ruta (puede ser la misma) para manejar las peticiones POST
 // Una misma ruta puede comportarse diferente según el método recibido.
 app.post('/hola', (req,res)=>{
     let cuerpoRecibido = req.body;
-    return res.send({respuesta: "enviaste los siguientes datos:", datos: cuerpoRecibido})
-})
+    return res.send({respuesta: "enviaste los siguientes datos:", datos: cuerpoRecibido.email})
+});

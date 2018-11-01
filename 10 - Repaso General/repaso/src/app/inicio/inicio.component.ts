@@ -11,8 +11,8 @@ export class InicioComponent {
   mostrar: 'recibir' | 'enviar';
   posts: Array<{id: string, title: string, body: string}> = [];
   // Campos de un post
-  title: string;
-  content: string;
+  titulo: string ;
+  contenido: string;
   // Donde almacenaremos la respuesta el enviar información
   respuesta: Object;
   constructor(public http: HttpClient) {
@@ -21,13 +21,15 @@ export class InicioComponent {
   recibirDatos() {
     this.cargando = true;
     this.http.get('https://jsonplaceholder.typicode.com/posts').toPromise()
-    .then((datos: Array<{title: string, body: string}>) => {
+    .then((datos: Array<{id: string, title: string, body: string}>) => {
+      // Si se ejecuto correctamente
       this.cargando = false;
       console.log(datos);
       this.posts = datos;
       this.mostrar = 'recibir';
     })
     .catch((error) => {
+      // Si no se ejecutó correctamente
       this.cargando = false;
       console.log(error);
     });
@@ -36,18 +38,20 @@ export class InicioComponent {
   enviarDatos() {
     this.cargando = true;
     // Creamos una variable local con let, llamada body, que contendrá los campos a enviar
-    const body = {
-      title: this.title,
-      content: this.content
+    const cuerpoPeticion = {
+      title: this.titulo,
+      content: this.contenido
     };
     // Posteriormente, realizamos la petición y enviamos esta variable como parámetro
-    this.http.post('https://jsonplaceholder.typicode.com/posts', body).toPromise()
-    .then((res) => {
+    this.http.post('https://jsonplaceholder.230912301239310.com/posts', cuerpoPeticion).toPromise()
+    .then((respuestaObtenida) => {
+      // Salio bien
       this.cargando = false;
-      console.log(res);
-      this.respuesta = JSON.stringify(res);
+      console.log(respuestaObtenida);
+      this.respuesta = JSON.stringify(respuestaObtenida);
     })
     .catch((error) => {
+      // Sale mal
       this.cargando = false;
       console.log(error);
       this.respuesta = JSON.stringify(error);

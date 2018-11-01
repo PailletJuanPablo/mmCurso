@@ -15,7 +15,7 @@ export class DetallePostComponent implements OnInit {
 
   ngOnInit() {
     this.idRecibido = this.rutaActiva.snapshot.params['id'];
-    this.http.get('https://jsonplaceholder.typicode.com/posts/'+ this.idRecibido)
+    this.http.get('https://jsonplaceholder.typicode.com/posts/' + this.idRecibido)
     .toPromise()
     .then((respuesta) => {
       console.log(respuesta);

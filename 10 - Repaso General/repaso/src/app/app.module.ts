@@ -12,7 +12,7 @@ import { InicioComponent } from './inicio/inicio.component';
 const rutasApp: Routes = [
   { path: '',  component: InicioComponent },
   { path: 'inicio',  component: InicioComponent },
-  { path: 'ver/:id', component: DetallePostComponent },
+  { path: 'ver/:id/', component: DetallePostComponent },
 ];
 
 @NgModule({
