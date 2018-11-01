@@ -1,0 +1,8 @@
+<button [routerLink]="['/inicio']"> Volver al inicio </button>
+  
+  <h3> Detalles de Post con id {{ idRecibido }}</h3>
+
+  <div *ngIf="post"> 
+<h2> Titulo: {{ post.title }}</h2>
+<h4> Contenido: {{ post.body }}</h4>
+</div> 

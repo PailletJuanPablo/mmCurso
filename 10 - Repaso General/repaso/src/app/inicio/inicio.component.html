@@ -1,0 +1,37 @@
+<p>
+  Página de Inicio
+</p>
+<h1> Enviar y Recibir Datos</h1>
+
+<button (click)="recibirDatos()"> Recibir Datos </button>
+<button (click)="mostrarEnviarDatos()"> Enviar Datos </button>
+
+<!-- Este div se mostrará si la variable cargando es igual a true -->
+<h3 *ngIf="cargando"> Cargando... </h3>
+
+
+<!-- Este div se mostrará si la variable mostrar es igual a recibir -->
+<div *ngIf="mostrar === 'recibir'">
+  <!-- Este div se se repetirá una vez por cada post recibido -->
+  <div *ngFor="let post of posts" [routerLink]="['/ver', post.id]">
+    <h3> Título: {{ post.title }} </h3>
+    <p>Cuerpo</p>
+    <p> {{ post.body }} </p>
+    <hr>
+  </div>
+</div>
+
+<!-- Este div se mostrará si la variable mostrar es igual a enviar -->
+<div *ngIf="mostrar === 'enviar'" style="width: 50%">
+  <form (submit)="enviarDatos()">
+    <label> Titulo </label>
+    <input [(ngModel)]="title" name="title" style="width: 100%">
+    <br>
+    <label> Contenido </label>
+    <textarea [(ngModel)]="content" name="title" style="width: 100%"></textarea>
+    <br>
+    <button type="submit"> Enviar </button>
+  </form>
+
+  <p> {{ respuesta }}</p>
+</div>
